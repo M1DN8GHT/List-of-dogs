@@ -7,7 +7,7 @@ This is the main module of the read/write to the text file project.
 
 __author__ = "Manase Yaya"
 __version__ = "0.1"
-__date__ = "October 8, 2024"
+__date__ = "October 9, 2024"
 __license__ = "None"
 
 def read_file(file_name) -> None:
@@ -33,15 +33,16 @@ def append_file(file_name, data) -> None:
         lines = f.readlines()
 
     with open(file_name, "a") as f:
-        if lines and lines[-1].strip()
-        if lines and last_line !="":
+        last_line = lines[-1].strip()
+        if lines and last_line != "":
             f.write("\n")
         f.write(data)  
+
 def main():
     """
     Main entry point of the application.
     """
-    append_file("cats.txt", "Burmese")
+    append_file("cats.txt", "Fat cat")
 
 if __name__ == "__main__":
     """
