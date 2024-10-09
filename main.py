@@ -33,16 +33,19 @@ def append_file(file_name, data) -> None:
         lines = f.readlines()
 
     with open(file_name, "a") as f:
-        last_line = lines[-1].strip()
-        if lines and last_line != "":
             f.write("\n")
-        f.write(data)  
-
+            f.write(data)  
+    """
+    Prompts the user to enter data and returns it as a string.
+    """
+    data = input("Enter data: ")
+    return data
 def main():
     """
     Main entry point of the application.
     """
-    append_file("cats.txt", "Fat cat")
+    user_submission = input("Enter data: ")
+    append_file("cats.txt", user_submission)
 
 if __name__ == "__main__":
     """
